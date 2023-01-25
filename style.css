@@ -5,8 +5,9 @@
 
 body {
     font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
-    ont-size: 14px;
+    font-size: 14px;
     font-weight: 500;
+    color: #333;
 }
 .FirstView {
     background-image: url("https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg") ;
@@ -38,6 +39,7 @@ body {
 }
 
 .HeaderNavListItem {
+    margin-right: 45px;
     font-size: 14px;
     font-family: 'Lato',sans-serif;
     display: flex;
@@ -45,8 +47,36 @@ body {
     text-align: center;
     color: black;
     text-decoration: none;
+    font-weight: 700;
+}
+.HeaderNavListItem__link {
+    font-size: 14px;
+    font-family: 'Lato',sans-serif;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
 }
 
+.HeaderNavListItem__link>span:last-child {
+    font-size: 10px;
+}
+
+.HeaderNavListItem__link>span {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+}
+/*
+.HeaderNavListItem>span {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+}
+*/
 /*.header-link {
     color: black;
     text-decoration: none;
@@ -58,6 +88,7 @@ body {
     text-decoration: none;
     padding: 15px;
     border-radius: 100px;
+    font-weight: 700;
 }
 
 .header-link-button:hover {
@@ -82,6 +113,7 @@ ul > li {
   padding: 21px 0;*/
     display: none;
 }
+
 
 .FirstView_container {
     max-width: 1140px;
@@ -174,11 +206,18 @@ ul > li {
 }
 
 .content {
-    background-color: white;
+    /*background-color: white;
     color: black;
     text-decoration: none;
     padding: 15px;
-    border-radius: 100px;
+    border-radius: 100px;*/
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    text-decoration: none;
+
 }
 
 .promice {
@@ -224,8 +263,26 @@ video {
     margin-left: 32px;
 }
 
+.about_title h2 {
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    line-height: 54px;
+    width: 100%;
+    margin-bottom: 10px;
+}
 
+.about_title p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 16px;
+}
 
+.content>img {
+    margin-right: 5px;
+}
 /*
 .FirstViewContent__buttons counseling {
     margin-right: 15px;
@@ -255,7 +312,15 @@ video {
         z-index: 100;*/
 }
 
-@media screen and (max-width: 1080px) {
+
+
+@media screen and (max-width: 1224px) {
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+    
     .HeaderNavList {
         display: none;
     }
@@ -323,5 +388,26 @@ video {
     
     .document {
         display: none;
-    }    
+    }
+    
+    .about {
+    flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /*main {
+    padding-top: 52px;
+    }
+    */
+    .FirstView {
+    background-image: url("https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp") ;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 28px;
+    }
+    
+    
+
 }
